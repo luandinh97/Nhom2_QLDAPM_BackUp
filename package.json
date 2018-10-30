@@ -1,0 +1,19 @@
+{
+  "name": "nhom2_qldapm_backup",
+  "version": "1.0.0",
+  "description": "Repo chứa mã nguồn cho dự án môn QLDAPM, lớp TH2015, nhóm 2 lớn",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luandinh97/Nhom2_QLDAPM_BackUp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luandinh97/Nhom2_QLDAPM_BackUp/issues"
+  },
+  "homepage": "https://github.com/luandinh97/Nhom2_QLDAPM_BackUp#readme"
+}
