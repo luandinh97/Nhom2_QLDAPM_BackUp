@@ -42,7 +42,7 @@ function getHTMLListitem(id, s) {
       html_child += '\
         <div class="col-md-3 col-sm-3">\
           <div class="products">\
-            <a href="#">'
+            <a href="/details/' + productsList[i].productId + '">'
               + offer + '\
               <div class="thumbnail">\
                 <img src="' + s + productsList[i].productId + '_1.jpg" alt="Product Name">\
@@ -86,6 +86,43 @@ function getHTMLListitem(id, s) {
   return new DOMParser().parseFromString(html_object);
 }
 
+/* Get details page. */
+router.get('/details/:productId', function(req, res, next) {  
+  var product = productsList.filter(product => product.productId == req.params.productId);
+  
+  if (product != null) {
+    var other = '', price = product[0].unitPrice;
+      if (product[0].count == 0) {
+        other = 'Limited';
+        console.log('null');
+      }
+    else console.log("khong null");
+    res.render('details', {
+     
+      title: product[0].productName,
+      main_offer: other,
+      main_src: '../images/' + product[0].productId, 
+      main_name: product[0].productName,
+      main_describe: product[0].describe,
+      main_new_price: price.toLocaleString("vi"),
+      main_xuatxu: product[0].configuration.xuatxu,
+      main_mau: product[0].configuration.maungoaithat,
+      main_cua: product[0].configuration.socua,
+      main_chongoi: product[0].configuration.sochongoi,
+      main_dongco: product[0].configuration.dongco,
+      main_km: product[0].configuration.sokmdadi,
+      main_tt:product[0].configuration.thongtinlienhe,
+      main_sdt: product[0].configuration.sdt,
+      main_email: product[0].configuration.email,
+      items: getHTMLListitem(product[0].productId, '../images/'),
+      title_header: 'Products Details',
+      
+    });
+  }
+  else {
+    res.render('error', {});
+  }
+});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
