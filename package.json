@@ -4,7 +4,8 @@
   "description": "Repo chứa mã nguồn cho dự án môn QLDAPM, lớp TH2015, nhóm 2 lớn",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,20 @@
   "bugs": {
     "url": "https://github.com/luandinh97/Nhom2_QLDAPM_BackUp/issues"
   },
-  "homepage": "https://github.com/luandinh97/Nhom2_QLDAPM_BackUp#readme"
+  "homepage": "https://github.com/luandinh97/Nhom2_QLDAPM_BackUp#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "express-handlebars-sections": "^1.0.1",
+    "express-session": "^1.15.6",
+    "handlebars": "^4.0.12",
+    "hbs": "^4.0.1",
+    "mongoose": "^5.3.9",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7",
+    "xmldom": "^0.1.27"
+  },
+  "devDependencies": {},
+  "keywords": []
 }
