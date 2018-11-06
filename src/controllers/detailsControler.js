@@ -87,19 +87,23 @@ function getHTMLListitem(id, s) {
 }
 
 /* Get details page. */
-router.get('/details/:productId', function(req, res, next) {  
-  var product = productsList.filter(product => product.productId == req.params.productId);
+router.get('/details/:productId', function(req, res, next) {
+  var href = '', state = '';
   
+    href = '#';
+    state = 'Log in';
+  
+  var product = productsList.filter(product => product.productId == req.params.productId);
   if (product != null) {
     var other = '', price = product[0].unitPrice;
       if (product[0].count == 0) {
         other = 'Limited';
-        console.log('null');
       }
-    else console.log("khong null");
+    
     res.render('details', {
-     
       title: product[0].productName,
+      href: href,
+      state: state,
       main_offer: other,
       main_src: '../images/' + product[0].productId, 
       main_name: product[0].productName,
@@ -124,27 +128,21 @@ router.get('/details/:productId', function(req, res, next) {
   }
 });
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  var href = '', state = '', action = '';
-  href = '#';
-  state = 'Log in';
-  action = "document.getElementById('id01').style.display='block'";
-  
-  res.render('index', { 
-    href: href,
-    state: state,
-    action: action,
-    title_header: 'Home Page'
-  });
-});
 
 /* GET home-details page*/
 router.get('/home-details', function(req, res, next) {
+  var href = '', state = '', action = '';
+ 
+    href = '#';
+    state = 'Log in';
+  
   res.render('home-details', {title: 'Product list', 
+    href: href,
+    state: state,
     items: getHTMLListitem(-1, '../images/'),
     title_header: 'Products'
   });
 });
+
 
 module.exports = router;
