@@ -13,8 +13,8 @@ app.use(cookieParser());
 app.engine('handlebars',exphbs({
     defaultLayout: 'main',
     layoutsDir: __dirname + '/views/layouts/',
-   
 }));
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(
     path.resolve(__dirname,'public')
@@ -24,7 +24,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use("/",require('./controllers/homeController'));
 app.use("/",require('./controllers/detailsControler'));
-
+app.use('/account', require('./controllers/accountController'));
 var server= app.listen(3000, ()=>{
 
     console.log(`connected on port: ${server.address().port}`);

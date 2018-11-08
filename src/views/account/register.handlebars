@@ -1,0 +1,87 @@
+<section id="register" class="section register form-session">
+		<div class="container">
+			<div class="login-wrap">
+				<div class="section-title">
+					<span>Welcome to</span>
+					<h1 class="title-h1">The cardealer online</h1>
+				</div>
+				<div class="form-login-wrap">
+					<form class="form-signin" method="POST">     
+						<div class="form-group">
+							<div class="form-group">
+								<label for="email" class="email-label label-common">Email*</label>
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa-lg"></i></i></span>
+									<input type="password" class="form-control password-rwd" name="password" placeholder="Password"/>
+								</div>
+							</div>     
+							<label for="name" class="name label-common" >User name*</label>
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-user fa-lg" aria-hidden="true"></i></span>
+								<input type="text" class="form-control username" name="username" placeholder="User name"/>  
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="password" class="password label-common">Password*</label>
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+								<input type="password" class="form-control password-rwd" name="password" placeholder="Password"/>
+							</div>
+						</div>      
+						<div class="form-group">
+							<label for="re-password" class="re-password label-common">Re-password*</label>
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+								<input type="password" class="form-control re-password-rwd" name="re-password" placeholder="Re-password"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="address" class="address-label label-common">Address*</label>
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-map-marker-alt fa-lg"></i></span>
+								<input type="text" class="form-control address" name="address" placeholder="Address"/>
+							</div>
+						</div>     
+						<div class="form-group">
+							<label for="phone" class="phone-label label-common">Phone*</label>
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-phone-volume fa-lg"></i></i></span>
+								<input type="text" class="form-control phone" name="phone" placeholder="Phone"/>
+							</div>
+						</div>          
+						<button class="btn btn-lg btn-danger btn-block" type="submit">Login</button>
+						<div class="have-account">
+							<span>Already here an account?please</span>
+							<a href="#">login here</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('.form-signin').each(function(index, el) {
+            $(this).validate({
+                rules: {
+                email: {
+                    required: true,
+                    email: true
+                },
+                password : {
+                    required: true,
+                }
+                },
+                messages: {
+                email: {
+                    required: "Vui lòng nhập Email1",
+                    email: "Email không đúng định dạng 1"
+                },
+                password:{
+                    required: "Vui lòng nhập password"
+                }
+                },
+            });
+          });
+        })
+    </script>
