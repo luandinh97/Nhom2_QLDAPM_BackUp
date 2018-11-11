@@ -24,6 +24,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use("/",require('./controllers/homeController'));
 app.use("/",require('./controllers/detailsControler'));
+app.use("/",require('./controllers/saleController'));
 app.use('/account', require('./controllers/accountController'));
 var server= app.listen(3000, ()=>{
 

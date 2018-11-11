@@ -1,0 +1,99 @@
+<div class="se-body-margin">
+	<div class="se-search-group">
+	<form action="/">
+		<div class="row row-flex">
+			<div class="col-lg-7 col-v-centered padding-0">
+			<input  id="search-box" type="text" class="form-control" placeholder="Bạn tìm gì...">
+			</div>
+			<div class="col-lg-2 col-v-centered padding-0">
+			<select id="province-slbox" class="form-control">
+				<option value='Toàn quốc'>Toàn quốc</option>
+				<option value='Tp Hồ Chí Minh'>Tp Hồ Chí Minh</option>
+				<option value='Hà Nội'>Hà Nội</option>
+				<option value='Đà Nẵng'>Đà Nẵng</option>
+			</select>
+			</div>
+			<div class="col-lg-2 col-v-centered padding-0">
+			<select id="price-slbox" class="form-control">
+				<option class="price" value='1'>Tất cả</option>
+				<option value='2'>Dưới 200 Triệu</option>
+				<option value='3'>200-400 Triệu</option>
+				<option value='4'>400-600 Triệu</option>
+			</select>
+			</div>
+			<div class="col-lg-1 col-v-centered padding-0">
+			<div class="input-group-btn">
+				<button id="search-btn" class="btn btn-primary" type="submit">
+					<span class="glyphicon glyphicon-search"></span>
+				</button>
+				</div>
+			</div>
+		</div>
+	</form>
+	</div>
+	<div class="se-list-posts">
+		<hr>
+		{{#each posts}}
+		<div class="row row-flex se-posts">
+			<div class="col-lg-4 col-v-centered">
+				<div>
+					<div class="se-posts-title">
+						<span>{{title}}</span>
+					</div>
+					<div class="se-posts-price">
+						<span>{{price_str}}</span>
+					</div>
+					<div class="se-posts-infor">
+						<span>{{user}}</span>
+						<span>|</span>
+						<span>{{date}}</span>
+						<span>|</span>
+						<span>{{province}}</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-v-centered se-posts-contact">
+				<div>
+					<div class="se-posts-phone">
+						<span class="glyphicon glyphicon-earphone"></span>
+						<span>{{phone}}</span>
+					</div>
+					<div class="se-posts-address">
+						<span class="glyphicon glyphicon glyphicon-home"></span>
+						<span>{{address}}</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5 col-v-centered">
+				<p>{{describe}}</p>
+			</div>
+		</div>
+		<hr>
+		{{/each}}
+		<div class="se-page">
+			<ul class="pagination">
+				{{#if isPrevPageActive}}
+				<li><a href="?page=1">«</a></li>
+				<li><a href="?page={{prevPage}}">‹</a></li>
+				{{else}}
+				<li class="disabled"><a href="javascript:;">«</a></li>
+				<li class="disabled"><a href="javascript:;">‹</a></li>
+				{{/if}}
+				{{#each pageNums}}
+				{{#if isCurPage}}
+				<li class="active"><a href="javascript:;">{{val}}</a></li>
+				{{else}}
+				<li><a href="?page={{val}}">{{val}}</a></li>
+				{{/if}}
+				{{/each}}
+				{{#if isNextPageActive}}
+				<li><a href="?page={{nextPage}}">›</a></li>
+				<li><a href="?page={{lastPage}}">»</a></li>
+				{{else}}
+				<li class="disabled"><a href="javascript:;">›</a></li>
+				<li class="disabled"><a href="javascript:;">»</a></li>
+				{{/if}}
+			</ul>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,73 @@
+.se-body-margin{
+	margin-left: 15%;
+	margin-right: 15%;
+	background-color: white;
+}
+.se-search-group{
+	padding: 15px !important;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.input-group{
+	font-size: 16px !important;
+}
+.se-list-posts {
+	font-size: 16px !important;
+}
+.se-list-posts p {
+	font-size: 16px !important;
+}
+.se-posts{
+	padding: 5px;
+}
+
+.se-posts-title{
+}
+.se-posts-price{
+	margin-top: 5px;
+	color: rgb(201, 9, 39);
+	font-weight: 700;
+}
+.se-posts-infor{
+	margin-top: 20px;
+	color: rgb(153, 153, 153);
+}
+.se-posts-contact{
+	margin-top: 5px;
+}
+.se-page{
+	text-align: center;
+	margin-top: 20px;
+}
+.input-group{
+	padding: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+#search-box{
+	font-size: 16px;
+	width: 100%;
+}
+#province-slbox{
+	font-size: 16px;
+	width: 100%;
+}
+#price-slbox{
+	font-size: 16px;
+	width: 100%;
+}
+.row-flex{
+	display: flex;
+}
+.col-v-centered{
+	display: flex;
+	align-items: center;
+}
+.padding-0{
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+}
+.no-gutter{
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
