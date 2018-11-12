@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../stylesheets/login-register.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/sale.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
+    <link href="../stylesheets/reset-form.css" rel="stylesheet">
   </head>
   <body>
     <div class="header">
@@ -38,7 +39,21 @@
                       <li>
                         <a href="{{href_reg}}" class="reg" > {{state_reg}} </a>
                       </li>
-                      
+                      <li>
+                        <a href="{{href_res}}" class="reg" onclick="document.getElementById('id03').style.display='block'"> {{state_res}} </a>
+                      </li>
+                      <div id="id03" class="modal">
+                        <form class="modal-content animate" method="POST" action="/reset">
+                                            <div class="container">
+                                                <label for="oldpassword"><b>Old-password</b></label>
+                                                <input type="password" placeholder="Enter Password" name="oldpassword" required>
+                                                <label for="newpassword"><b>New-Password</b></label>
+                                                <input type="password" placeholder="Enter Password" name="newpassword" required>
+                                                <button type="button">Reset-password</button>
+                                                <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+                                            </div>
+                                        </form>                 
+                      </div>
                     </ul>
                   </div>
                 </div>
@@ -65,7 +80,7 @@
                     <li><a href="/home-details">Tìm mua ôtô</a></li>
                     <li><a href="../../">Salon ôtô</a></li>
                     <li><a href="/sale">Bán ôtô</a></li>
-                    <li><a href="../../">My BonBanh</a></li>
+                    <li><a href="/profile">My Profile</a></li>
                   </ul>
                 </div>
               </div>
