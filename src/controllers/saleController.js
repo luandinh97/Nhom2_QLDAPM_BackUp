@@ -42,6 +42,10 @@ router.get('/sale', function(req, res) {
 			}
 		}
 		
+		href = '/account/login';
+		state = 'Log in';
+		href_reg = "/account/register";
+		state_reg = "Register";
 		res.render('sale', {
 			posts: posts,
 			pageNums: nums,
@@ -50,7 +54,11 @@ router.get('/sale', function(req, res) {
 			lastPage: nPages,
 			isEmpty: count === 0,
 			isPrevPageActive: page !== 1,
-			isNextPageActive: page !== nPages
+			isNextPageActive: page !== nPages,
+			state_reg: state_reg,
+			state: state,
+			href:href,
+			href_reg:href_reg
 		});
 	});
 });

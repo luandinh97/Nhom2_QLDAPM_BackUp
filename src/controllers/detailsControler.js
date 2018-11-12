@@ -88,10 +88,12 @@ function getHTMLListitem(id, s) {
 
 /* Get details page. */
 router.get('/details/:productId', function(req, res, next) {
-  var href = '', state = '';
+  var href = '', state = '', href_reg = '', state_reg ='';
   
-    href = '#';
+    href = '/account/login';
     state = 'Log in';
+    href_reg = "/account/register";
+    state_reg = "Register";
   
   var product = productsList.filter(product => product.productId == req.params.productId);
   if (product != null) {
@@ -104,6 +106,8 @@ router.get('/details/:productId', function(req, res, next) {
       title: product[0].productName,
       href: href,
       state: state,
+      href_reg:href_reg,
+      state_reg:state_reg,
       main_offer: other,
       main_src: '../images/' + product[0].productId, 
       main_name: product[0].productName,
@@ -131,14 +135,18 @@ router.get('/details/:productId', function(req, res, next) {
 
 /* GET home-details page*/
 router.get('/home-details', function(req, res, next) {
-  var href = '', state = '', action = '';
- 
-    href = '#';
-    state = 'Log in';
+  var href = '', state = '', href_reg = '', state_reg ='';
   
+    href = '/account/login';
+    state = 'Log in';
+    href_reg = "/account/register";
+    state_reg = "Register";
+
   res.render('home-details', {title: 'Product list', 
     href: href,
     state: state,
+    href_reg:href_reg,
+    state_reg: state_reg,
     items: getHTMLListitem(-1, '../images/'),
     title_header: 'Products'
   });
