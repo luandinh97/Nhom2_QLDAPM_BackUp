@@ -1,0 +1,65 @@
+/*=============================================================PAGE-SHOWROOM==================================================================================*/
+a:hover,a:focus{text-decoration: none;}
+.new-line-title{display: block;overflow: auto;}
+.new-line-title .stripe-line {height: 24px;margin-top: 5px;overflow: hidden;background: url(../images/stripe.png);}
+.new-line-title .wrap-name{float:left;margin-right: 10px;margin-top:0px;}
+.new-line-title .wrap-name .name{font-weight: 900;color:#ed8222;font-size: 22px;text-decoration: none;}
+section.salon-oto .salon-box{position: relative;}
+section.salon-oto .salon-box .title-salon{ background: #f7f7f7; padding: 10px 15px 0px; border: 1px solid #eaeaea;border-bottom:2px solid #ED8222;}
+section.salon-oto .salon-box .title-salon .title-country{font-size: 18px;color:inherit; border: 1px solid #ED8222; border-bottom: none; border-top-width: 1px; border-color: transparent; font-weight:400;position: relative;display: inline-block;transition: all ease 0.4s;}
+section.salon-oto .salon-box .title-salon .title-country > span { position: relative; z-index: 2; }
+section.salon-oto .salon-box .title-salon .title-country.active { border-color: #ED8222; border-left-color: #eaeaea; border-right-color: #eaeaea; }
+section.salon-oto .salon-box .title-salon .title-country.active:before{ background: #fff; }
+section.salon-oto .salon-box .title-salon .title-country:before{content: "";left: 0;bottom: -3px;top:0;right: 0;background: transparent;position: absolute;z-index: 1;transition: all ease 0.4s;}
+section.salon-oto .salon-box .title-salon .title-country:hover:before{background: #fff;}
+section.salon-oto .salon-box .title-salon .title-country:hover {border-color: #ED8222; border-left-color: #eaeaea; border-right-color: #eaeaea; }
+section.salon-oto .salon-box .title-salon .title-country{padding: 5px 10px;}
+section.salon-oto .salon-box .bottom-salonoto-country{display: none;}
+section.salon-oto .salon-box .bottom-salonoto-country.active{display: flex;flex-wrap: wrap; margin: 0 -10px;}
+section.salon-oto .salon-box .bottom-salonoto-country .one-box{width: 25%;padding :10px 10px;}
+section.salon-oto .salon-box .bottom-salonoto-country .one-news{height: 100%;}
+section.salon-oto .salon-box .bottom-salonoto-country .one-news .text-decription{padding: 10px 0px;}
+section.salon-oto .salon-box .bottom-salonoto-country .one-box .one-news .img-news{width: 359px;}
+section.salon-oto .salon-box .bottom-salonoto-country .one-news,section.salon-oto .salon-box .bottom-salonoto-country .left-news{border:1px solid rgba(84,84,84,0);transition: 0.8s all ease;}
+section.salon-oto .salon-box .bottom-salonoto-country .one-box-big{width: 50%;padding:10px 10px }
+section.salon-oto .salon-box .bottom-salonoto-country .left-news{margin-right: unset;width: unset;height: 100%;}
+section.salon-oto .salon-box .bottom-salonoto-country .one-box-big  .left-news .img-news{object-fit: cover;object-position: center;}
+section.salon-oto .salon-box .bottom-salonoto-country .left-news .text-decription .name-news{font-size: 16px;}
+section.salon-oto .salon-box .bottom-salonoto-country .left-news .text-decription .detail-news{font-size: 12px;}
+section.salon-oto .salon-box .bottom-salonoto-country .one-news .text-decription .name-news{font-size: 16px}
+section.salon-oto .salon-box .wrap-bottom-project-industry { border-top: none; }
+section.salon-oto .bottom-salonoto-country .one-box{width: 25%;padding :10px 10px;}
+section.salon-oto .bottom-salonoto-country .one-news{height: 100%;}
+section.salon-oto  .bottom-salonoto-country .one-news .text-decription{padding: 10px 0px;}
+section.salon-oto  .bottom-salonoto-country .one-box .one-news .img-news{width: 359px;max-width: 100%;}
+section.salon-oto .bottom-salonoto-country .one-news,section.salon-oto .salon-box .bottom-salonoto-country .left-news{border:1px solid rgba(84,84,84,0);transition: 0.8s all ease;}
+section.salon-oto .bottom-salonoto-country .one-box-big{width: 50%;padding:10px 10px }
+section.salon-oto  .bottom-salonoto-country .left-news{margin-right: unset;width: unset;height: 100%;}
+section.salon-oto  .bottom-salonoto-country .one-box-big  .left-news .img-news{object-fit: cover;object-position: center;}
+section.salon-oto  .bottom-salonoto-country .left-news .text-decription .name-news{font-size: 16px;}
+section.salon-oto .bottom-salonoto-country .left-news .text-decription .detail-news{font-size: 12px;}
+section.salon-oto .bottom-salonoto-country .one-news .text-decription .name-news{font-size: 16px}
+section.salon-oto .wrap-bottom-project-industry { border-top: none; }
+section.salon-oto  .bottom-salonoto-country.active{display: flex;flex-wrap: wrap; margin: 0 -10px;width: 100%;}
+section.salon-oto .salon-box .title-salon .title-different:hover .list-city,section.salon-oto .salon-box .title-salon .title-different:focus .list-city{display: flex;}
+/*=========================================================SHOWROOM============================================================================*/
+section.salon-oto .search-salon .float-left{display: inline-block;}
+section.salon-oto .search-salon .float-left h4{display: inline-block;}
+section.salon-oto .search-salon .float-left a{margin: 0px 10px;text-decoration: none;}
+section.salon-oto .search-salon .float-right{float: right;padding: 10px;}
+section.salon-oto .search-salon .float-right .input-Search{width: 400px;padding: 5px 20px;border-radius: 5px;}
+section.salon-oto .list-city{position: absolute;top: 37px;background:#EFEFEF ;width: 540px;display: none;}
+section.salon-oto .list-city ul{width: 33.33%;}
+section.salon-oto .list-city ul li{list-style-type: none;}
+
+@media screen and (max-width: 1199px){
+	section.salon-oto .search-salon .float-right .input-Search{width: 300px;}
+}
+@media screen and (max-width: 991px){/*768*576*/
+section.salon-oto .bottom-salonoto-country .one-box{width: 50%;}
+}
+
+@media screen and (max-width: 375px){
+	section.salon-oto .bottom-salonoto-country .one-box{width: 100%;}
+	section.salon-oto .search-salon .float-right .input-Search{width: 250px;}
+}

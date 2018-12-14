@@ -28,6 +28,7 @@ app.use("/",require('./controllers/saleController'));
 app.use('/account', require('./controllers/accountController'));
 app.use("/profile",require('./controllers/profileController'));
 app.use("/admin-layout",require('./controllers/admin-layout'));
+app.use("/salonoto",require('./controllers/profileController'));
 var server= app.listen(3000, ()=>{
 
     console.log(`connected on port: ${server.address().port}`);
